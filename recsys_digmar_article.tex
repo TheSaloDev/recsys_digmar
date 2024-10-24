@@ -7,6 +7,7 @@
 \usepackage[IL2]{fontenc} % lepšia sadzba písmena Ľ než v T1
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{subcaption}
 \usepackage{url} % príkaz \url na formátovanie URL
 \usepackage{hyperref} % odkazy v texte budú aktívne (pri niektorých triedach dokumentov spôsobuje posun textu)
 
@@ -15,7 +16,8 @@
 
 \pagestyle{headings}
 
-\title{Recommendation systems for personalized advertising in digital marketing\thanks{Semestral project in the subject Methods of engineering work, academic year 2024/25, supervised by Pavol Batalik}} % meno a priezvisko vyučujúceho na cvičeniach
+\title{Recommendation systems for personalized advertising in digital marketing} % meno a priezvisko vyučujúceho na cvičeniach
+
 
 \author{Vsevolod Salik\\[2pt]
 	{\small Slovak University of Technology in Bratislava }\\
@@ -29,7 +31,11 @@
 
 \begin{document}
 
+
 \maketitle
+%\thanks{Semestral project in the subject Methods of engineering work, academic year 2024/25, supervised by Pavol Batalik}
+%insert thanks part in the title after i figure out how it works
+
 
 \begin{abstract}
 \ldots
@@ -38,32 +44,43 @@
 
 
 \section{Introduction}
-Test
-\ref{fig:dia1} Start of work on article.
 
 
-\begin{figure}[h!]
-	\includegraphics[width=0.75\textwidth]{diagram_1.pdf}
- 	\label{fig:dia1}
-	
-	\caption{Start of the work diagram.}
+\section{ImagesTest}
+\graphicspath{ {./images/PNG} }
+Inserted image using basic includegraphics
+
+\includegraphics[width=0.5\textwidth]{STU-FIIT-ancnh.png}
+
+I needed to use [h] for my second image so it doesnt go to the end of the file, that why there is weird identation
+
+\begin{figure}[h]
+	\includegraphics[width=0.5\textwidth]{STU-FIIT-anfnh.png}
+	\caption{STU FIIT Logo blue version}
+	\label{logo_2}
 \end{figure}
 
-%\begin{figure}[h!]
-%\begin{subfigure}
-  %\includegraphics[width=0.75\textwidth]{diagram_2.pdf}
-  %\caption{Recommendation systems role in personalized ads.}
-%\ref{fig:dia2} Recommendation systems role in personalized ads.
-%\end{subfigure}
-%\begin{subfigure}
-  %\includegraphics[width=0.75\textwidth]{diagram_1.pdf}
-  %\caption{Start of work.}
-  %\label{fig:dia1}
-%\ref{fig:dia1} Start of work on an article.
-%\end{subfigure}
-%\end{figure}
+\hfil\includegraphics[width=0.3\textwidth]{STU-FIIT-ancnv.png}\hfil\includegraphics[width=0.3\textwidth]{STU-FIIT-ancv.png}
 
-
+\begin{figure}[h]
+	\caption{All variations of FIIT LOGO}
+	\label{fig:logos}
+	\begin{subfigure}[b]{0.3\textwidth}
+		\centering
+		\includegraphics[scale=0.3]{STU-FIIT-nfv.png}
+		\caption{Blue version}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\textwidth}
+		\centering
+		\includegraphics[scale=0.3]{STU-FIIT-zcv.png}
+		\caption{White version}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\textwidth}
+		\centering
+		\includegraphics[scale=0.3]{STU-FIIT-zcvn.png}
+		\caption{Black version}
+	\end{subfigure}
+\end{figure}
 
 \section{Second Part}
 
