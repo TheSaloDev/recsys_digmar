@@ -1,6 +1,6 @@
 % Metódy inžinierskej práce
 
-\documentclass[10pt,twocolumn,twoside,english,a4paper]{article}
+\documentclass[10pt,twoside,english,a4paper]{article}
 
 \usepackage[english]{babel}
 %\usepackage[T1]{fontenc}
@@ -10,6 +10,8 @@
 \usepackage{subcaption}
 \usepackage{url} % príkaz \url na formátovanie URL
 \usepackage{hyperref} % odkazy v texte budú aktívne (pri niektorých triedach dokumentov spôsobuje posun textu)
+\usepackage{float}
+\usepackage{wrapfig}
 
 \usepackage{cite}
 %\usepackage{times}
@@ -64,7 +66,7 @@ I needed to use [h] for my second image so it doesnt go to the end of the file, 
 
 \section{Practice 4}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\caption{All variations of FIIT LOGO}
 	\label{fig:logos}
 	\begin{subfigure}[b]{0.3\textwidth}
@@ -82,7 +84,7 @@ I needed to use [h] for my second image so it doesnt go to the end of the file, 
 	\end{subfigure}
 \end{figure}
 
-\begin{figure*}[h]
+\begin{figure}[H]
 	\caption{UMLet diagrams}
 	\label{fig:umletdiag}
 	\begin{subfigure}[b]{0.5\textwidth}
@@ -95,7 +97,15 @@ I needed to use [h] for my second image so it doesnt go to the end of the file, 
 		\includegraphics[width=1\textwidth]{diagram_2.pdf}
 		\caption{diagram n.2}
 	\end{subfigure}
-\end{figure*}
+\end{figure}
+
+%fiit logo wrapped by text
+some text (should not be just 2 words for it to not look weird)
+\begin{wrapfigure}{l}{0.3\textwidth}
+    \includegraphics[scale=0.3]{STU-FIIT-ancnv.png}
+\end{wrapfigure}
+some more text to test if the image is being wrapped as planned
+\newline more and more text...
 
 %\acknowledgement{Ak niekomu chcete poďakovať\ldots}
 
