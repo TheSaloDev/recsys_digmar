@@ -12,6 +12,7 @@
 \usepackage{hyperref} % odkazy v texte budú aktívne (pri niektorých triedach dokumentov spôsobuje posun textu)
 \usepackage{float}
 \usepackage{wrapfig}
+\usepackage{mathtools}
 
 \usepackage{cite}
 %\usepackage{times}
@@ -106,6 +107,17 @@ some text (should not be just 2 words for it to not look weird)
 \end{wrapfigure}
 some more text to test if the image is being wrapped as planned
 \newline more and more text...
+
+\begin{displaymath}
+	A_{3,n} = 
+	\begin{pmatrix}
+		a_{1,1} & \cdots & a_{1,n} \\
+		a_{2,1} & \cdots & a_{2,n} \\
+		a_{3,1} & \cdots & a_{3,n}
+	\end{pmatrix}
+\end{displaymath}
+
+%todo understand how to move the matrix under all this text above
 
 %\acknowledgement{Ak niekomu chcete poďakovať\ldots}
 
