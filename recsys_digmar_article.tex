@@ -17,6 +17,9 @@
 \usepackage{cite}
 %\usepackage{times}
 
+\usepackage{geometry}
+\geometry{top=1in, bottom=1in, left=1.5in, right=1.5in}
+
 \pagestyle{headings}
 
 \title{Recommendation systems for personalized advertising in digital marketing} % meno a priezvisko vyučujúceho na cvičeniach
@@ -40,6 +43,7 @@
 %insert thanks part in the title after i figure out how it works
 
 
+
 \begin{abstract}
 \ldots
 \end{abstract}
@@ -47,75 +51,17 @@
 
 
 \section{Introduction}
+\medskip We live in a digital era, where technology plays an essential role in enhancing quality of life. Internet , one of the most transformative inventions, is the the largest repository of information ever created which can be used from almost every part of the world. Humanity gained an access to a such powerful tool which is beyond human capabilities, making it difficult to retain all the information encountered daily. That is the part where recommendation systems step in.
 
+\medskip Recommendation systems provide information based on prior user interactions, tailored to match individual interests. They can be applied across various types of data, such as music, videos, articles, shopping, and services. This article focuses on personalized advertising in the field of digital marketing.
 
-\section{ImagesTest}
-\graphicspath{ {./images/PNG} }
-Inserted image using basic includegraphics
+\medskip Competition on a marketplace grows daily. Targeting the appropriate audience and effectively selling products has become more complex comparing to previous years and that is why confronting a customer to make a purchase by simply showing them the advertisement is no longer effective enough. 
 
-\includegraphics[width=0.5\textwidth]{STU-FIIT-ancnh.png}
+\medskip The main focus of an advertising industry is not to send the ads to everyone but to find appropriate customers, who can be potentially interested in your product, afterward, create personalized advertisements, which will target them, to satisfy both customer needs and business financial objectives. Recommendation systems make it possible to identify relevant customers, tailoring content to each individual, recognizing preferences, and increasing their engagement. These are the primary functions of recommendation systems in digital marketing.
 
-I needed to use [h] for my second image so it doesnt go to the end of the file, that why there is weird identation
+\medskip This article will briefly explore recommendation systems templates, describe principles of their work, examine the role of artificial intelligence, and present custom recommender engine implementations. The goal is to optimize the use of recommendation systems to create personalized advertisements that increase sales efficiency.
 
-\begin{figure}[h]
-	\includegraphics[width=0.5\textwidth]{STU-FIIT-anfnh.png}
-	\caption{STU FIIT Logo blue version}
-	\label{logo_2}
-\end{figure}
-
-\hfil\includegraphics[width=0.3\textwidth]{STU-FIIT-ancnv.png}\hfil\includegraphics[width=0.3\textwidth]{STU-FIIT-ancv.png}
-
-\section{Practice 4}
-
-\begin{figure}[H]
-	\caption{All variations of FIIT LOGO}
-	\label{fig:logos}
-	\begin{subfigure}[b]{0.3\textwidth}
-		\includegraphics[scale=0.3]{STU-FIIT-nfv.png}
-		\caption{Blue version}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.3\textwidth}
-		\includegraphics[scale=0.3]{STU-FIIT-zcv.png}
-		\caption{White version}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.3\textwidth}
-		\centering
-		\includegraphics[scale=0.3]{STU-FIIT-zcvn.png}
-		\caption{Black version}
-	\end{subfigure}
-\end{figure}
-
-\begin{figure}[H]
-	\caption{UMLet diagrams}
-	\label{fig:umletdiag}
-	\begin{subfigure}[b]{0.5\textwidth}
-		\centering
-		\includegraphics[width=1\textwidth]{diagram_1.pdf}
-		\caption{diagram n.1}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.5\textwidth}
-		\centering
-		\includegraphics[width=1\textwidth]{diagram_2.pdf}
-		\caption{diagram n.2}
-	\end{subfigure}
-\end{figure}
-
-%fiit logo wrapped by text
-some text (should not be just 2 words for it to not look weird)
-\begin{wrapfigure}{l}{0.3\textwidth}
-    \includegraphics[scale=0.3]{STU-FIIT-ancnv.png}
-\end{wrapfigure}
-some more text to test if the image is being wrapped as planned
-\newline more and more text...
-
-\begin{displaymath}
-	A_{3,n} = 
-	\begin{pmatrix}
-		a_{1,1} & \cdots & a_{1,n} \\
-		a_{2,1} & \cdots & a_{2,n} \\
-		a_{3,1} & \cdots & a_{3,n}
-	\end{pmatrix}
-\end{displaymath}
+\section{Recommendation systems}
 
 %todo understand how to move the matrix under all this text above
 
