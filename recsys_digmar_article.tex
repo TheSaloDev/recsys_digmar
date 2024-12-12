@@ -39,13 +39,14 @@
 
 
 \maketitle
-%\thanks{Semestral project in the subject Methods of engineering work, academic year 2024/25, supervised by Pavol Batalik}
+\thanks{Semestral project in the subject Methods of engineering work, academic year 2024/25, supervised by Pavol Batalik}
 %insert thanks part in the title after i figure out how it works
 
 
 
 \begin{abstract}
-\ldots
+	In the modern era, internet is the biggest information source humanity could ever imagine.  However, this tool’s effectiveness can be limited due to the lack of knowledge or accessibility of users. Recommendation systems help to assist users, by filtering information based on previous user interactions to create recommendations for them consisting of products relevant to their interests. Recommendation systems are used widely in various fields. This article will focus on covering personalized advertising in digital marketing field.
+	%%todo end the second part of abstract based especially on digital marketing
 \end{abstract}
 
 
@@ -55,15 +56,16 @@ We live in a digital era, where technology plays an essential role in enhancing 
 
 \medskip Recommendation systems provide information based on prior user interactions, tailored to match individual interests. They can be applied across various types of data, such as music, videos, articles, shopping, and services. This article focuses on personalized advertising in the field of digital marketing.
 
-\medskip Competition on a marketplace grows daily. Targeting the appropriate audience and effectively selling products has become more complex comparing to previous years and that is why confronting a customer to make a purchase by simply showing them the advertisement is no longer effective enough. 
+\medskip Competition on a marketplace grows daily. Targeting the appropriate audience and effectively selling products has become more complex comparing to previous years and that is why confronting a customer to make a purchase by simply showing them the advertisement is no longer effective enough.
 
 \medskip The main focus of an advertising industry is not to send the ads to everyone but to find appropriate customers, who can be potentially interested in your product, afterward, create personalized advertisements, which will target them, to satisfy both customer needs and business financial objectives. Recommendation systems make it possible to identify relevant customers, tailoring content to each individual, recognizing preferences, and increasing their engagement. These are the primary functions of recommendation systems in digital marketing.
 
 \medskip This article will briefly explore recommendation systems templates, describe principles of their work, examine the role of artificial intelligence, and present custom recommender engine implementations. The goal is to optimize the use of recommendation systems to create personalized advertising that increase sales efficiency.
 
-\section{Recommendation systems}
+%%\newpage
 
-As shown on a figure \ref{fig:fig1}, model of an RS consists of user, item resource and recommendation algorithm \cite{8506344}. 
+\section{Recommendation systems}
+As shown on a figure \ref{fig:fig1}, model of an RS consists of user, item resource and recommendation algorithm \cite{8506344}.
 Among these components, the recommendation algorithm is the most important part of RS\cite{ren2012research}\cite{zhang2015research}
 The user model consists of computed preferences derived from personal data, including search history, purchase history, saved webpages, and so on.
 
@@ -72,9 +74,9 @@ Following this an item within the user’s field of interest is selected, and a 
 The performance of a recommendation system is not covered in this section ,as it is directly related to the recommendation algorithm, which will be described in subsequent sections.
 
 \begin{figure}[H]
-    \includegraphics[width=1\textwidth]{./diagrams/recommender_system_model.png}
-    \caption{Model of recommender systems. Reproduced from \cite{8506344}}
-    \label{fig:fig1}
+	\includegraphics[width=1\textwidth]{./diagrams/recommender_system_model.png}
+	\caption{Model of recommender systems. Reproduced from \cite{8506344}}
+	\label{fig:fig1}
 \end{figure}
 
 
@@ -84,15 +86,36 @@ Different types of recommender systems serve distinct purposes. This article wil
 % bellow i am going to describe pros and cons of all the methods and try to find the most optimal one
 
 \begin{figure}[H]
-    \includegraphics[width=1\textwidth]{./diagrams/recommender_systems_types.png}
-    \caption{Types of recommender systems referenced in this article. Adapted from \cite{10113923}}
-    \label{fig:fig2}
+	\includegraphics[width=1\textwidth]{./diagrams/recommender_systems_types.png}
+	\caption{Types of recommender systems referenced in this article. Adapted from \cite{10113923}}
+	\label{fig:fig2}
 \end{figure}
 
-\section{Trigger and triggered model}
-Trigger and triggered model (TT) is an enhanced version of a recommendation system which provides anonymous recommendations, when user prioritizes privacy.
 
-\section{Recommendation algorithm}
+
+%%\section{Trigger and triggered model}
+%%Trigger and triggered model (TT) is an enhanced version of a recommendation system which provides anonymous recommendations, when user prioritizes privacy.
+
+
+
+\section{Recommendation algorithms}
+
+\subsection{Memory-based}
+Memory based algorithms can be divided into two categories:
+user-based\cite{WANG2017102} and item-based algorithms.
+\medskip
+
+User-based Collaborative Filtering is among the most successful and widely implemented techniques in RSs. It recommends items to a target user based on opinions of other similar users to them . After forming the neighborhood, the new rating for the target user-item pair is estimated considering the weights of different neighbors. That is, the higher is the similarity of a user with the target user, the more impact their rating has on the estimation of the target user’s rating. The new rating for user u and item i is predicted as rui~ using: \cite{8550639}
+
+% \begin{figure}[H]
+%     \centering %%redo as a normal math formula (not enough time)
+%     \includegraphics[width=0.5\textwidth]{./diagrams/math_formula.png}
+%     \label{fig:fig3}
+% \end{figure}
+\begin{equation*} \mathop {\tilde {r}}\nolimits _{ui} =\frac {\sum \limits _{u'\in \mathop {NS}\nolimits _{u}} {(\mathop r\nolimits _{u'i})\times (\text {similarity}(\text {u},\text {u}'))}}{\sum \limits _{u'\in \mathop {NS}\nolimits _{u}} {\vert (\text {similarity}(\text {u},\text {u}'))\vert }}\end{equation*}
+
+where r\tiny{kj} \normalsize is the rating on item v\tiny{j} \normalsize given by user , is the average rating of all the items rated by user u\tiny{i} \normalsize , N(i) denotes the set of the top M nearest users to user u\tiny{i} \normalsize
+\cite{CHANG2025121355}
 
 % \section{Results}
 
