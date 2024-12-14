@@ -12,6 +12,7 @@
 \usepackage{wrapfig}
 \usepackage{mathtools}
 \usepackage{cite}
+\usepackage{array}
 %\usepackage{times}
 
 \usepackage{geometry}
@@ -57,9 +58,21 @@ We live in a digital era, where technology plays an essential role in enhancing 
 
 \medskip The main focus of an advertising industry is not to send the ads to everyone but to find appropriate customers, who can be potentially interested in your product, afterward, create personalized advertisements, which will target them, to satisfy both customer needs and business financial objectives. Recommendation systems make it possible to identify relevant customers, tailoring content to each individual, recognizing preferences, and increasing their engagement. These are the primary functions of recommendation systems in digital marketing.
 
-\medskip This article will briefly explore recommendation systems templates, describe principles of their work, examine the role of artificial intelligence, and present custom recommender engine implementations. The goal is to optimize the use of recommendation systems to create personalized advertising that increase sales efficiency.
-
+\medskip This article will briefly explore recommendation systems templates, describe principles of their work, most popular challenges with the recommendation systems and examine the role of artificial intelligence. The goal is to think of the optimal usage of recommendation systems to create personalized advertising that increase sales efficiency.
 %%\newpage
+
+\section{Efficiency of personalized ads}
+
+It can be concluded from the Mehta REENA and Kulkarni UDITA study \cite{mehta2020personalized_ads} that personalized advertising positively influences a customer's desire to purchase a product. However, it is important to keep privacy in mind and avoid overusing it, as the effect may become less favorable.
+
+\medskip As shown on Figure \ref{fig:fig6} with strongly recommending personalized advertisement their efficiency decreases significantly.
+
+\begin{figure}[H]
+    \centering
+	\includegraphics[width=1\textwidth]{./diagrams/customers but intentions.png}
+	\caption{AI areas and techniques. Adapted from \cite{mehta2020personalized_ads}}
+	\label{fig:fig6}
+\end{figure}
 
 \section{Recommendation systems}
 As shown on a figure \ref{fig:fig1}, model of an RS consists of user, item resource and recommendation algorithm \cite{8506344}.
@@ -114,14 +127,26 @@ For example, consider a case where user \( i \) gave score \( 1 \) to item \( \a
 2 + (1.5 - 1) = 2.5
 \]
 
-(see \ref{fig:fig3} for an illustration)
+(see \ref{fig:slope_one} for an illustration)
 
-\begin{figure}[H]
+\begin{table}[h!]
     \centering
-	\includegraphics[width=0.75\textwidth]{./diagrams/slope one predictor.jpg}
-	\caption{Slope One predictor. Adapted from \cite{LU20121}}
-	\label{fig:fig3}
-\end{figure}
+    \begin{tabular}{|c|c|c|}
+    \hline
+              & \textbf{object $\alpha$} & \textbf{object $\beta$} \\ \hline
+    \textbf{user $i$} & 1                   & 1.5                   \\ \hline
+    \textbf{user $j$} & 2                   & $x$                   \\ \hline
+    \end{tabular}
+    \caption{Slope One predictor. Inspired by \cite{LU20121}.}
+    \label{fig:slope_one}
+\end{table}
+
+% \begin{figure}[H]
+%     \centering
+% 	\includegraphics[width=0.75\textwidth]{./diagrams/slope one predictor.jpg}
+% 	\caption{Slope One predictor. Adapted from \cite{LU20121}}
+% 	\label{fig:fig3}
+% \end{figure}
 
 \subsection{Memory-based}
 Memory based algorithms can be divided into two categories:
@@ -148,6 +173,19 @@ When estimating an unknown rating value, first Eq. (1) is modified to calculate 
 \begin{equation*} \mathop {\tilde {r}}\nolimits _{ui} =\frac {\sum \limits _{i'\in \mathop {NS}\nolimits _{i}} {(\mathop r\nolimits _{u{i}'})\times (\text {similarity}(\text {i},\text {i}'))}}{\sum \limits _{i'\in \mathop {NS}\nolimits _{i}} {\vert (\text {similarity}(\text {i},\text {i}'))\vert }}\tag{2}\end{equation*}
 where \textit{NSi} is the neighborhood set of item \textit{i} \cite{8550639}
 
+\subsubsection{Hybrid}
+
+Combination of multiple methods. Mostly used, as it improves recommendation accuracy makes it easier to address limitations like the cold-start problem or overspecialization. 
+
+ Common strategies include weighted hybridization (combining outputs of multiple methods), switching methods (choosing the best approach based on context), and feature augmentation (using one system's output as input for another)\ref{fig:fig7}
+
+\begin{figure}[H]
+    \centering
+	\includegraphics[width=0.6\textwidth]{./diagrams/hybrid.png}
+	\caption{Hybrid strategies}
+	\label{fig:fig7}
+\end{figure}
+
 \section{Recommendation problems}
 
 \subsection{Cold-start problem}
@@ -173,14 +211,26 @@ There are many different types of recommendations that an RS can generate, and e
 \end{figure}
 
 \section{Artificial intelligence usage}
+There are eight main models and methodologies as shown in \ref{fig:fig5} Deep neural networks, transfer learning, active learning, and fuzzy techniques are representatives for knowledge and reasoning and are interconnected with each other. Evolutionary algorithms and reinforcement learning are related to reasoning and planning, while natural language processing is the main technique for communication and perception, and computer vision is for the perception of images.
+\cite{zhang2021ai_recommender}
+\begin{figure}[H]
+    \centering
+	\includegraphics[width=0.7\textwidth]{./diagrams/ai_recommender.png}
+	\caption{AI areas and techniques. Reproduced from \cite{zhang2021ai_recommender}}
+	\label{fig:fig5}
+\end{figure}
 
 
-\section{Efficiency of personalized ads}
+
 
 \section{Discussion}
+Despite the evident benefits, personalized advertisements are not without limitations. Overusing them mostly leads to decreased efficiency, as customers start to feel annoyed and overwhelmed by over-exploiting their privacy.  Besides ethical aspects, the recommendation systems are not capable of solving all the existent problems. It is possible to minimize their effect in the digital marketing field. 
 
+\medskip Future researches should be more focused on the development of algorithms that are  more balanced between privacy and personalization to produce adequate recommendation in a form of personalized advertisements to satisfy both the customer and companies. 
 \section{Conclusion}
-
+Recommendation systems have become unreplaceable, especially in the electronic commerce field, letting businesses to create highly effective personalized advertisements.
+By collecting data on user behavior and preferences, RS'es are able to create adequate recommendation to provide a better advertising experience for users and increases in sales.
+However, there are still problems like cold-start, scalability, popularity bias and those that were not mentioned in this article, that require exceptional adjustments from the technical side of RS algorithms. It is also important to not forget about customers privacy to not cross the border of the data they do not want to be used.  Combining recommender algorithms in the hybrid form to accomplish these issues should be the most optimal solution to maximize the income.
 
 %\acknowledgement{Ak niekomu chcete poďakovať\ldots}
 
